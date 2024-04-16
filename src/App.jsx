@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import SongList from './components/SongList'
+
+const data = [{
+    "brand": "joysound",
+    "no": "916281",
+    "title": "(NOT JUST) KNEE DEEP",
+    "singer": "FUNKADELIC",
+    "composer": "G.CLINTON,JR.",
+    "lyricist": "G.CLINTON,JR.",
+    "release": "2012-06-18"
+  },
+  {
+    "brand": "joysound",
+    "no": "227531",
+    "title": "(This is not just)Song for me",
+    "singer": "Syrup16g",
+    "composer": "Takashi Igarashi",
+    "lyricist": "Takashi Igarashi",
+    "release": "2005-11-10"
+  },
+  {
+    "brand": "joysound",
+    "no": "239259",
+    "title": "4 MY PEOPLE(BASEMENT JAXX REMIX)",
+    "singer": "MISSY ELLIOTT",
+    "composer": "ELLIOTT MELISSA A,JEFFERS EVE,NOLEN DANTE MAURICE,STEWART NISAN C",
+    "lyricist": "ELLIOTT MELISSA A,JEFFERS EVE,NOLEN DANTE MAURICE,STEWART NISAN C",
+    "release": "2006-10-19"
+  },]
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <SongList data = {data}/>
     </>
   )
 }
