@@ -1,5 +1,6 @@
 import './App.css'
 import SongList from './components/SongList'
+import SearchBar from './components/SearchBar'
 
 const data = [{
     "brand": "joysound",
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <SearchBar/>
       <SongList data = {data}/>
     </>
   )
